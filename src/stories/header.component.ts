@@ -27,10 +27,10 @@ import { User } from './User';
       <div>
         <div *ngIf="user">
           <span class="welcome">
-            Welcome, <b>{{ user.name }}</b
+            Welcome, <b>{{ user }}</b
             >!
           </span>
-          <storybook-button
+          <!-- <storybook-button
             *ngIf="user"
             size="small"
             (onClick)="onLogout.emit($event)"
@@ -53,7 +53,7 @@ import { User } from './User';
             class="margin-left"
             (onClick)="onCreateAccount.emit($event)"
             label="Sign up"
-          ></storybook-button>
+          ></storybook-button> -->
         </div>
       </div>
     </div>

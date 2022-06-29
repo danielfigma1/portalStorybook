@@ -6,43 +6,22 @@ import Button from './button.component';
 import Header from './header.component';
 import Page from './page.component';
 
-// export default {
-//   title: 'Example/Page',
-//   component: Page,
-//   parameters: {
-//     // More on Story layout: https://storybook.js.org/docs/angular/configure/story-layout
-//     layout: 'fullscreen',
-//   },
-//   decorators: [
-//     moduleMetadata({
-//       declarations: [Button, Header],
-//       imports: [CommonModule],
-//     }),
-//   ],
-// } as Meta;
-
-
+import { withDesign } from "storybook-addon-designs";
 
 export default {
-  title: "My stories",
-  component: Button,
-};
-
-export const myStory = () => '<Button>Hello, World!</Button>';
-
-myStory.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/D6rC4uJFxCOETXulEAWMLm/Portal-V2?node-id=407%3A39118",
+  title: 'Example/Page',
+  component: Page,
+  parameters: {
+    // More on Story layout: https://storybook.js.org/docs/angular/configure/story-layout
+    layout: 'fullscreen',
   },
-};
-
-
-
-
-
-
-
+  decorators: [
+    moduleMetadata({
+      declarations: [Button, Header],
+      imports: [CommonModule],
+    }),
+  ],
+} as Meta;
 
 const Template: Story<Page> = (args: Page) => ({
   props: args,
