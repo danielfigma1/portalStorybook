@@ -19,3 +19,47 @@ $my-theme: mat.define-light-theme((
 .darkMode app-dashboard-navigation mat-grid-list .item-shadow{
     box-shadow: 1px 1px 2px 0px $dark-shadow !important;
 }
+
+.mat-card-title{
+  color: mat-color($app-light-primary) !important;
+}
+
+.dash-card-widget-con{
+  display: flex;
+}
+
+.card-flex{
+  flex: 1 1 auto;
+}
+
+.dash-card-widget{
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-indicator{
+  display: flex;
+  margin-bottom: 0;
+  color: red;
+}
+
+.mat-table{
+  width: 100%;
+}
+
+
+
+.darkMode .mat-card{
+  background: mat-color($app-dark-primary, 500) !important;
+}
+
+// #divChart{
+//   width: 700px;
+//   height: 400px;
+// }
+
+// #testChartContainer{
+//   width: 800px;
+//   height: 400px;
+// }

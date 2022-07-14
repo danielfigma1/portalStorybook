@@ -6,7 +6,7 @@
           <mat-card-subtitle>Small</mat-card-subtitle>
           <mat-icon>more_horiz</mat-icon>
         </mat-card-title-group>
-        <mat-card-content>
+        <mat-card-content class="dash-card-widget-con">
           <div class="dash-card-widget">
             <p class="card-indicator">(-1.35%) <mat-icon>arrow_downward</mat-icon></p>
             <mat-card-subtitle>Decrease</mat-card-subtitle>
@@ -25,13 +25,17 @@
           <mat-icon>more_horiz</mat-icon>
         </mat-card-title-group>
         <mat-card-content>
-       
           <owl-carousel-o [options]="customOptions">
-            <ng-template carouselSlide>Slide 1</ng-template>  
-            <ng-template carouselSlide>Slide 2</ng-template>  
-            <ng-template carouselSlide>Slide 3</ng-template>  
+            <ng-template carouselSlide>
+              <img src="https://picsum.photos/200/300?grayscale" style="height: 200px; width:  100%;">
+            </ng-template>  
+            <ng-template carouselSlide>
+              <img src="https://picsum.photos/seed/picsum/200/300" style="height: 200px; width:  100%;">
+            </ng-template>  
+            <ng-template carouselSlide>
+              <img src="https://picsum.photos/id/237/200/300" style="height: 200px; width:  100%;">
+            </ng-template>  
           </owl-carousel-o>
-         
         </mat-card-content>
       </mat-card>
   </mat-grid-tile>
