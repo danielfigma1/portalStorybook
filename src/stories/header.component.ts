@@ -1,8 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { User } from './User';
+import AccordionComponent from './accordion.component';
 
 @Component({
   selector: 'storybook-header',
+  standalone:true,
+  imports: [AccordionComponent],
   template: `<header>
     <div class="wrapper">
       <div>
@@ -22,38 +24,18 @@ import { User } from './User';
             />
           </g>
         </svg>
-        <h1>Test</h1>
+        <h1>Acme</h1>
       </div>
       <div>
         <div *ngIf="user">
           <span class="welcome">
-            Welcome, <b>{{ user }}</b
-            >!
+            Welcome
           </span>
-          <!-- <storybook-button
-            *ngIf="user"
-            size="small"
-            (onClick)="onLogout.emit($event)"
-            label="Log out"
-          ></storybook-button>
-        </div>
-        <div *ngIf="!user">
-          <storybook-button
-            *ngIf="!user"
-            size="small"
-            class="margin-left"
-            (onClick)="onLogin.emit($event)"
-            label="Log in"
-          ></storybook-button>
-          <storybook-button
-            *ngIf="!user"
-            primary
-            size="small"
-            primary="true"
-            class="margin-left"
-            (onClick)="onCreateAccount.emit($event)"
-            label="Sign up"
-          ></storybook-button> -->
+          <bauer-accordion
+          [panelOpenState]="false"
+          theme="blue"
+          label="Close Accordion"
+        ></bauer-accordion>
         </div>
       </div>
     </div>
@@ -61,15 +43,15 @@ import { User } from './User';
   styleUrls: ['./header.css'],
 })
 export default class HeaderComponent {
-  @Input()
-  user: User | null = null;
+  // @Input()
+  // user: User | null = null;
 
-  @Output()
-  onLogin = new EventEmitter<Event>();
+  // @Output()
+  // onLogin = new EventEmitter<Event>();
 
-  @Output()
-  onLogout = new EventEmitter<Event>();
+  // @Output()
+  // onLogout = new EventEmitter<Event>();
 
-  @Output()
-  onCreateAccount = new EventEmitter<Event>();
+  // @Output()
+  // onCreateAccount = new EventEmitter<Event>();
 }

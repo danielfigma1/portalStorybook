@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+@import './src/custom-theme.scss';
+@include mat.core();
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $app-light-primary,
+   accent: $app-light-accent,
+ )
+));
+
+@include mat.all-component-themes($my-theme);
+
+.item-shadow{
+    box-shadow: 1px 1px 2px 0px $light-shadow !important;
+}
+
+// Dark Mode
+.darkMode app-dashboard-navigation mat-grid-list .item-shadow{
+    box-shadow: 1px 1px 2px 0px $dark-shadow !important;
+}

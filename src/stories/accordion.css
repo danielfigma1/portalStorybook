@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* 
+  Color Theme 
+  ------------------------
+  Blue
+    Primary: #004477
+    Secondary: #F3C200
+    Text: #333333
+    Body: #F2F2F2
+
+  Dark
+    Primary: #303030
+    Secondary: #F3C200
+    Text: #FFFFFF
+    Body: #424242
+*/
+
+:root {
+  --primary-color: #004477;
+  --secondary-color: #F3C200;
+  --text-color: #333333;
+  --body-color: #F2F2F2;
+  --table-stroke-color: #DFDFDF;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background: #F2F2F2;
+}
+
+.mat-expansion-panel-header {
+  background: #F2F2F2;
+  font-size: 18px;
+  color: #333333;
+  border: #DFDFDF;
+}
+
+.mat-accordion .mat-expansion-panel:last-of-type {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.mat-accordion .mat-expansion-panel:first-of-type {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.mat-expansion-panel-header-title{
+  font-size: 18px;
+}
+
+/* Dark */
+
+.mat-expansion-panel.dark{
+  background: #424242;
+  color: #FFFFFF;
+}
+
+.mat-expansion-panel.dark .mat-expansion-panel-header{
+  background: #303030;
+  color: #FFFFFF;
+}
+
+.mat-expansion-panel.dark .mat-expansion-panel-header .mat-expansion-panel-header-title{
+  color: #FFFFFF;
+}
+
+.mat-expansion-panel.dark .mat-expansion-panel-header .mat-expansion-panel-header-description, .mat-expansion-indicator::after{
+  color: #FFFFFF;
+}

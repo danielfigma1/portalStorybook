@@ -1,0 +1,248 @@
+
+@use '@angular/material' as mat;
+@import "@angular/material/theming";
+@include mat.core();
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel.scss';
+@import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto'
+);
+
+$angular-primary:  (
+  50 : #e0e9ef,
+  100 : #b3c7d6,
+  200 : #80a2bb,
+  300 : #4d7ca0,
+  400 : #26608b,
+  500 : #004477,
+  600 : #003e6f,
+  700 : #003564,
+  800 : #002d5a,
+  900 : #001f47,
+  A100 : #7ba6ff,
+  A200 : #4884ff,
+  A400 : #1562ff,
+  A700 : #0052fb,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #ffffff,
+      A700 : #ffffff,
+  )
+);
+
+$angular-accent:  (
+  50 : #fef8e0,
+  100 : #fbedb3,
+  200 : #f9e180,
+  300 : #f7d44d,
+  400 : #f5cb26,
+  500 : #f3c200,
+  600 : #f1bc00,
+  700 : #efb400,
+  800 : #edac00,
+  900 : #ea9f00,
+  A100 : #ffffff,
+  A200 : #fff3de,
+  A400 : #ffe0ab,
+  A700 : #ffd791,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$angular-warn:(
+  50 : #ffe0e0,
+  100 : #ffb3b3,
+  200 : #ff8080,
+  300 : #ff4d4d,
+  400 : #ff2626,
+  500 : #ff0000,
+  600 : #ff0000,
+  700 : #ff0000,
+  800 : #ff0000,
+  900 : #ff0000,
+  A100 : #ffffff,
+  A200 : #fff2f2,
+  A400 : #ffbfbf,
+  A700 : #ffa6a6,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+//Dark
+$angular-dark-primary: (
+    50 : #e6e6e6,
+    100 : #c1c1c1,
+    200 : #989898,
+    300 : #6e6e6e,
+    400 : #4c4d48, //body
+    500 : #303030, //menu
+    600 : #2b2b2b,
+    700 : #242424,
+    800 : #1e1e1e,
+    900 : #131313,
+    A100 : #ef6c6c,
+    A200 : #ea3e3e,
+    A400 : #f50000,
+    A700 : #db0000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// $angular-dark-accent: (
+//     50 : #eaeae9,
+//     100 : #c9cac8,
+//     200 : #a6a6a4,
+//     300 : #82827f,
+//     400 : #676863,
+//     500 : #4c4d48,
+//     600 : #454641,
+//     700 : #3c3d38,
+//     800 : #333430,
+//     900 : #242521,
+//     A100 : #cdf67a,
+//     A200 : #baf24b,
+//     A400 : #aeff0b,
+//     A700 : #a0f100,
+//     contrast: (
+//         50 : #000000,
+//         100 : #000000,
+//         200 : #000000,
+//         300 : #000000,
+//         400 : #ffffff,
+//         500 : #ffffff,
+//         600 : #ffffff,
+//         700 : #ffffff,
+//         800 : #ffffff,
+//         900 : #ffffff,
+//         A100 : #000000,
+//         A200 : #000000,
+//         A400 : #000000,
+//         A700 : #000000,
+//     )
+// );
+
+
+
+// $angular-dark-warn: (
+//     50 : #fef8e0,
+//     100 : #fbedb3,
+//     200 : #f9e180,
+//     300 : #f7d44d,
+//     400 : #f5cb26,
+//     500 : #f3c200,
+//     600 : #f1bc00,
+//     700 : #efb400,
+//     800 : #edac00,
+//     900 : #ea9f00,
+//     A100 : #ffffff,
+//     A200 : #fff3de,
+//     A400 : #ffe0ab,
+//     A700 : #ffd791,
+//     contrast: (
+//         50 : #000000,
+//         100 : #000000,
+//         200 : #000000,
+//         300 : #000000,
+//         400 : #000000,
+//         500 : #000000,
+//         600 : #000000,
+//         700 : #000000,
+//         800 : #000000,
+//         900 : #000000,
+//         A100 : #000000,
+//         A200 : #000000,
+//         A400 : #000000,
+//         A700 : #000000,
+//     )
+// );
+
+//Light Theme
+$app-light-primary: mat-palette($angular-primary);
+$app-light-accent:  mat-palette($angular-accent);
+$app-light-warn:    mat-palette($angular-warn);
+$app-light-theme:   mat-light-theme($app-light-primary, $app-light-accent, $app-light-warn);
+
+//@include angular-material-theme($app-light-theme);
+@include angular-material-typography($custom-typography);
+@include mat.all-component-themes($app-light-theme);
+@include mat.button-color($app-light-theme);
+
+//Dark Theme
+$app-dark-primary: mat-palette($angular-dark-primary);
+$app-dark-accent:  mat-palette($angular-accent,500, 100, 900);
+$app-dark-warn:    mat-palette($angular-warn);
+$app-dark-theme:   mat-dark-theme($app-dark-primary, $app-dark-accent, $app-dark-warn);
+
+//Global Colors
+$white: #ffffff;
+$light-shadow: #c7c7c7;
+$light-body:   #F6F6F6;
+$light-icon:   #7E8299;
+
+$dark-body:  #4c4d48;
+$dark-shadow: mat-color($app-dark-primary, 900);
+
+$test-body: #F0F4F7;
+
+
+
+.darkMode {
+  @include mat.all-component-colors($app-dark-theme);
+  @include mat.button-color($app-dark-theme);
+}

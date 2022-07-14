@@ -1,0 +1,185 @@
+@use '@angular/material' as mat;
+@import 'src/custom-theme.scss';
+
+// Custom Theme
+.primary-background {
+    background: mat-color($app-light-primary) !important;
+}
+
+.mainbreadcrumb .user {
+    color: mat-color($app-light-primary) !important;
+}
+
+.menu-close {
+    width: 90px;
+    transition: .1s all;
+}
+
+.top-nav-icon{
+    padding: 0 10px;
+    color: $light-icon;
+}
+
+.menu-open {
+    width: 270px;
+    transition: .1s all;
+}
+
+.nav-title{
+    transition: .5s all !important;
+}
+// .menu-close-text mat-list-item span .nav-title {
+//     display: initial !important;
+// }
+
+mat-sidenav-content {
+    transition: .1s all;
+}
+
+.toolbar{
+    background: $white;
+}
+
+mat-toolbar-row {
+    color: $white;
+    font-size: 20px;
+}
+
+.active {
+    background: mat-color($app-light-primary, 800) !important;
+    border-radius: 10px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.active mat-icon,
+.active span {
+    color: mat-color($app-light-accent) !important;
+}
+
+.logo-name{
+   padding-left:10px;
+}
+
+.side-icon {
+    font-size: 30px !important;
+    height: 30px !important;
+    width: 30px !important;
+    color: $white !important;
+    // display: flex !important;
+    align-items: center !important;
+    padding: 0 5px !important;
+    transition: .5s all;
+}
+
+.primary-background a {
+    color: $white !important;
+}
+
+.maincontent{
+    padding: 50px 45px 120px 45px;
+    background: $light-body !important;
+}
+
+.footer{
+    padding: 30px 45px;
+    background: $white;
+}
+
+// .item-shadow{
+//     box-shadow: 1px 1px 2px 0px $light-shadow !important;
+// }
+
+.app-class .mat-list-item span {
+    // display: flex;
+    // align-items: center;
+}
+
+.theme-icon{
+    color: mat-color($app-dark-primary) !important;
+}
+
+mat-toolbar{
+    height: 100px !important;
+}
+
+
+//Dark Mode
+.darkMode .side-icon,
+.darkMode .theme-icon {
+    color: $white !important;
+}
+
+.darkMode .maincontent{
+    background: $dark-body !important;
+}
+
+.darkMode .active {
+    background: mat-color($app-dark-primary, 800) !important;
+}
+
+.darkMode .active mat-icon,
+.darkMode .active span {
+    color: mat-color($app-dark-accent) !important;
+}
+
+.darkMode .primary-background,
+.darkMode .toolbar-logo {
+    background: mat-color($app-dark-primary, 500) !important;
+}
+
+.darkMode .footer{
+    background: mat-color($app-dark-primary);
+    color: mat.get-color-from-palette($app-dark-primary, '400-contrast') !important;
+}
+
+.darkMode .mainbreadcrumb .user {
+    color: mat-color($app-dark-accent) !important;
+}
+
+.darkMode .top-nav-icon{
+    color: $white;
+}
+
+.darkMode .toolbar,
+.darkMode mat-sidenav-content {
+    // background: mat-color($app-dark-primary,400) !important;
+    background: $dark-body;
+}
+
+.darkMode .themetoggle{
+  color: mat-color($app-dark-warn) !important;
+}
+
+// light
+.light .theme-icon{
+    color: mat-color($app-light-primary) !important;
+}
+
+.light .maincontent{
+    background: $test-body !important;
+}
+
+.light .primary-background,
+.light .toolbar-logo {
+    background: $white !important;
+}
+
+.light .primary-background a,
+.light .side-icon,
+.light .logo-name{
+    color: $dark-body !important;
+}
+
+.light .toolbar{
+    background: $test-body !important;
+}
+
+.light .active {
+    background: mat-color($app-dark-primary, 800) !important;
+}
+
+.light .active mat-icon,
+.light .active span {
+    color: mat-color($app-dark-accent) !important;
+}

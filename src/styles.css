@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import '../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css';
+@import "../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css";
+@import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default'; */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-card-header{
+    padding-bottom:10px;
+}
+
+.mat-grid-list {
+    padding: 0 !important;
+}
+
+.mat-grid-list>div {
+    margin: -8px -10px;
+}
+
+.mat-grid-list>div .mat-grid-tile {
+    position: static !important;
+    overflow: visible !important;
+    padding: 0 10px !important;
+    display: inline-block !important;
+    margin: 8px 0 20px !important;
+    vertical-align: top !important;
+    box-sizing: border-box;
+    /* min-width: 200px !important; */
+}
+
+.mat-grid-list>div .mat-grid-tile-content {
+    position: static !important;
+    display: block !important;
+}
+
+.mat-grid-list>div .mat-card {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.mat-grid-tile-content {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}

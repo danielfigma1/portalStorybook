@@ -1,0 +1,213 @@
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let photo of photosArr.slice(0, 4);">
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title class="primary">{{photo.title | slice:0:9}}</mat-card-title>
+          <mat-card-subtitle>Small</mat-card-subtitle>
+          <mat-icon>more_horiz</mat-icon>
+        </mat-card-title-group>
+        <mat-card-content>
+          <div class="dash-card-widget">
+            <p class="card-indicator">(-1.35%) <mat-icon>arrow_downward</mat-icon></p>
+            <mat-card-subtitle>Decrease</mat-card-subtitle>
+          </div>
+          <span class="card-flex"></span>
+          <img mat-card-sm-image src="{{photo.url}}" >
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="2">
+  <mat-grid-tile >
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title class="primary">Carousel</mat-card-title>
+          <mat-icon>more_horiz</mat-icon>
+        </mat-card-title-group>
+        <mat-card-content>
+       
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>Slide 1</ng-template>  
+            <ng-template carouselSlide>Slide 2</ng-template>  
+            <ng-template carouselSlide>Slide 3</ng-template>  
+          </owl-carousel-o>
+         
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile >
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title class="primary">B-Report Activity</mat-card-title>
+          <mat-icon>more_horiz</mat-icon>
+        </mat-card-title-group>
+        <mat-card-content>
+          <div id="divChart">
+            <canvas id="myChart"></canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="1">
+  <mat-grid-tile *ngFor="let photo of photosArr.slice(0, 1);">
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title class="primary">Jira Issues</mat-card-title>
+          <mat-icon>more_horiz</mat-icon>
+        </mat-card-title-group>
+        <mat-card-content>
+          <table mat-table [dataSource]="tableDataArr">
+            
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef> Email </th>
+              <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="body">
+              <th mat-header-cell *matHeaderCellDef> Body </th>
+              <td mat-cell *matCellDef="let element"> {{element.body}} </td>
+            </ng-container>
+          
+          
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="3">
+  <mat-grid-tile *ngFor="let photo of photosArr.slice(0, 3);">
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title class="primary">{{photo.title | slice:0:9}}</mat-card-title>
+          <mat-card-subtitle>Small</mat-card-subtitle>
+          <mat-icon>more_horiz</mat-icon>
+        </mat-card-title-group>
+        <mat-card-content>
+          <mat-card-subtitle>{{photo.title}}</mat-card-subtitle>
+          <span class="card-flex"></span>
+          <img mat-card-sm-image src="{{photo.url}}" >
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="1">
+  <mat-grid-tile *ngFor="let photo of photosArr.slice(0, 1);">
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title class="primary">{{photo.title}}</mat-card-title>
+          <mat-card-subtitle>Small</mat-card-subtitle>
+          <mat-icon>more_horiz</mat-icon>
+        </mat-card-title-group>
+        <mat-card-content>
+          <mat-card-subtitle>{{photo.title}}</mat-card-subtitle>
+          <span class="card-flex"></span>
+          <img mat-card-sm-image src="{{photo.url}}" >
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+<mat-grid-list cols="1">
+  <mat-grid-tile >
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title class="primary">Test Api</mat-card-title>
+          <mat-icon>more_horiz</mat-icon>
+        </mat-card-title-group>
+        <mat-card-content>
+          <div id="testChartContainer">
+            <canvas id="testChart"></canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<!-- 
+<mat-grid-list cols="4" rowHeight="2:1" [gutterSize]="'20px'">
+  <mat-grid-tile class="item-shadow">
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="item-shadow">
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="item-shadow">
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="item-shadow">
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<br>
+<mat-grid-list cols="2" rowHeight="2:1" [gutterSize]="'20px'">
+  <mat-grid-tile class="item-shadow">
+    <mat-card>Simple card</mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="item-shadow">
+    <mat-card>Simple card</mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<br>
+<mat-grid-list cols="1" rowHeight="3:1" [gutterSize]="'20px'">
+  <mat-grid-tile class="item-shadow">
+    <mat-card>Simple card</mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<br>
+<mat-grid-list cols="3" rowHeight="2:1" [gutterSize]="'20px'">
+  <mat-grid-tile class="item-shadow">
+    <mat-card>Simple card</mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="item-shadow">
+    <mat-card>Simple card</mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="item-shadow">
+    <mat-card>Simple card</mat-card>
+  </mat-grid-tile>
+</mat-grid-list> -->
